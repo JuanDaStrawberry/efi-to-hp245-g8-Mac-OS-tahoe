@@ -1,10 +1,10 @@
 # efi-to-hp245-g8-Mac-OS-tahoe
 
-EFI
+## EFI
 
 OpenCore EFI files for my laptop, designed for use with macOS Tahoe (though they should work with earlier versions, Ventura and later). Remember to generate a smbios; this EFI file is empty in that section.
 
-##Specifications
+## Specifications
 
 CPU: AMD Ryzen 5 5500U (6 cores, 12 threads)
 GPU: iGPU, 4 GB VRAM (changed with Smokeless_UMAF)
@@ -12,7 +12,7 @@ RAM: 1 x 16 GB DDR4 module at 3200 MHz and 1 x 4 GB DDR4 module at 3200 MHz
 Wi-Fi/Bluetooth: Realtek RTL8822CE
 SSD: Kingston SNV2S/1000G
 
-##Features:
+## Features:
 Wi-Fi and Bluetooth (Wi-Fi will be fixed later with rt88.kext)
 Ethernet
 All USB ports
@@ -24,7 +24,7 @@ Touchpad
 iGPU (not compatible with Electron, Steam, Chrome, Spotify, and other Electron-based apps. They require...) Disable hardware acceleration)
 iServices
 
-##Features that don't work:
+## Features that don't work:
 AirDrop
 Hardware DRM/VCN (I use Mozilla for streaming apps)
 Keyboard mute LED
@@ -33,7 +33,7 @@ Most Continuity features (the only ones that seem to work are Universal Clipboar
 
 macOS Tahoe is quite unstable, although the injection order of some kexts seems incorrect or out of order, it's actually the one I personally found most efficient.
 
-##Installation guide: 
+## Installation guide: 
 Install macOS with Secure Boot disabled, as it comes with this EFI. PLEASE INSTALL WITHOUT INTERNET CONNECTION. During the initial macOS setup, create a local account; do not log in to your iCloud account. This will display the File Vault tab. DO NOT ACTIVATE FILE VAULT (it's very problematic to activate it).
 
 Once macOS is installed, place the EFI in its corresponding location. You can now connect to the internet and log in with your iCloud account. Log in, and it will ask for the password of your other Apple device to decrypt iCloud. Enter it, let the process fail, and it will say it forgot the password and add it later. Now mount your EFI partition and edit its config.plist file. Enable Secure Boot (in this case, the value is j214k). (MacbookPro16,2) Restart your system, then return to the Apple Account settings tab. Try syncing iCloud again, this time entering the password from your other Apple device. This should succeed. This process will enable iServices.

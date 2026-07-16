@@ -21,7 +21,7 @@ OpenCore EFI files for my laptop, designed for use with macOS Tahoe (though they
 - Sleep mode
 - Keyboard
 - Touchpad
-- iGPU (not compatible with Electron, Steam, Chrome, Spotify, and other Electron-based apps. They require...) Disable hardware acceleration)
+- iGPU (not compatible with Electron.) ( Steam, Chrome, Spotify, and other Electron-based apps. They require Disable hardware acceleration)
 - iServices
 
 ## Features that don't work:
